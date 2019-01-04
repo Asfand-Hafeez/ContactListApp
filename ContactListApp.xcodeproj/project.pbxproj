@@ -14,6 +14,7 @@
 		583B7C5621DF785400DB2F2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 583B7C5421DF785400DB2F2B /* LaunchScreen.storyboard */; };
 		583B7C6121DF785400DB2F2B /* ContactListAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583B7C6021DF785400DB2F2B /* ContactListAppTests.swift */; };
 		583B7C6C21DF785500DB2F2B /* ContactListAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583B7C6B21DF785500DB2F2B /* ContactListAppUITests.swift */; };
+		583B7C7A21DF788E00DB2F2B /* FrontVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583B7C7921DF788E00DB2F2B /* FrontVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		583B7C6721DF785500DB2F2B /* ContactListAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContactListAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		583B7C6B21DF785500DB2F2B /* ContactListAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListAppUITests.swift; sourceTree = "<group>"; };
 		583B7C6D21DF785500DB2F2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		583B7C7921DF788E00DB2F2B /* FrontVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				583B7C5221DF785400DB2F2B /* Assets.xcassets */,
 				583B7C5421DF785400DB2F2B /* LaunchScreen.storyboard */,
 				583B7C5721DF785400DB2F2B /* Info.plist */,
+				583B7C7921DF788E00DB2F2B /* FrontVC.swift */,
 			);
 			path = ContactListApp;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			files = (
 				583B7C4E21DF785300DB2F2B /* ViewController.swift in Sources */,
 				583B7C4C21DF785300DB2F2B /* AppDelegate.swift in Sources */,
+				583B7C7A21DF788E00DB2F2B /* FrontVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

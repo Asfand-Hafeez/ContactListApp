@@ -1,24 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--FrontVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="FrontVC" customModule="ContactListApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GqZ-PI-I0c">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdu-J0-jyX">
+                                        <rect key="frame" x="132" y="34" width="111" height="36"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                        <state key="normal" title="Chose Button">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="OnClickList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Omi-cs-F86"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fff-Xz-Jed">
+                                        <rect key="frame" x="320" y="34" width="45" height="36"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                        <state key="normal" title="Done">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="OnClickList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JK0-Ej-Q5o"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJG-Zr-lTg">
+                                        <rect key="frame" x="10" y="34" width="56" height="36"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="OnClickList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3YU-HD-UKh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.49166944610920904" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="MJG-Zr-lTg" firstAttribute="leading" secondItem="GqZ-PI-I0c" secondAttribute="leading" constant="10" id="GN3-b3-i8g"/>
+                                    <constraint firstItem="Fff-Xz-Jed" firstAttribute="centerY" secondItem="hdu-J0-jyX" secondAttribute="centerY" id="Qym-oi-ltn"/>
+                                    <constraint firstAttribute="height" constant="80" id="ino-b5-Esw"/>
+                                    <constraint firstAttribute="trailing" secondItem="Fff-Xz-Jed" secondAttribute="trailing" constant="10" id="jkI-ZX-yWu"/>
+                                    <constraint firstAttribute="bottom" secondItem="hdu-J0-jyX" secondAttribute="bottom" constant="10" id="nxy-ai-TUf"/>
+                                    <constraint firstItem="MJG-Zr-lTg" firstAttribute="centerY" secondItem="hdu-J0-jyX" secondAttribute="centerY" id="xtO-aB-wOX"/>
+                                    <constraint firstItem="hdu-J0-jyX" firstAttribute="centerX" secondItem="GqZ-PI-I0c" secondAttribute="centerX" id="yUl-4H-z4k"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EYg-b7-GUb">
+                                <rect key="frame" x="0.0" y="80" width="375" height="587"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="56" id="YAv-Os-0qj" customClass="CustomCell" customModule="ContactListApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="56"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YAv-Os-0qj" id="dxh-K7-2o9">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xkk-Hy-KxN">
+                                                    <rect key="frame" x="335" y="18" width="20" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="Ac6-Fh-S2U"/>
+                                                        <constraint firstAttribute="width" constant="20" id="k64-AY-F41"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Xkk-Hy-KxN" firstAttribute="centerY" secondItem="dxh-K7-2o9" secondAttribute="centerY" id="2xw-as-nDd"/>
+                                                <constraint firstAttribute="trailing" secondItem="Xkk-Hy-KxN" secondAttribute="trailing" constant="20" id="tIV-Px-ixF"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cellImageView" destination="Xkk-Hy-KxN" id="bAw-mO-lNQ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EYg-b7-GUb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6VY-0e-Q8k"/>
+                            <constraint firstItem="GqZ-PI-I0c" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="6wC-dW-Bl4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EYg-b7-GUb" secondAttribute="trailing" id="DUF-2R-ZSc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EYg-b7-GUb" secondAttribute="bottom" id="cY4-gj-Wcb"/>
+                            <constraint firstItem="EYg-b7-GUb" firstAttribute="top" secondItem="GqZ-PI-I0c" secondAttribute="bottom" id="iNB-B3-V7P"/>
+                            <constraint firstItem="GqZ-PI-I0c" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="vF4-BA-QCx"/>
+                            <constraint firstItem="GqZ-PI-I0c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="y9c-SH-T2i"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="EYg-b7-GUb" id="NNQ-zY-lW3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>
